@@ -1,0 +1,17 @@
+ 
+ @use './variable' as var;
+ body {
+  font-family: var.$font-family-base;
+  font-size: var.$font-size-base;
+  color: var.$text-color;
+  background-color: var.$background-color;
+  line-height: var.$line-height-base;
+}
+
+button {
+  background-color: var.$primary-color;
+  border-radius: var.$border-radius;
+  box-shadow: var.$box-shadow;
+  padding: var.$spacing-medium;
+  color: #fff;
+}

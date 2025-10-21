@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext", // optional, for compatibility
+    "esModuleInterop": true // optional, for better import compatibility
+  },
+  "include": ["vite.config.mjs"]
+}
