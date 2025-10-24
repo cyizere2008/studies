@@ -1,0 +1,66 @@
+/*
+|--------------------------------------------------------------------------
+| MAIN LAYOUT / CONTENT AREA STYLES
+|--------------------------------------------------------------------------
+*/
+
+/* 1. Body/Root Styles (Ensure full height and correct background) */
+body {
+    /* Set the main background color for the entire page, matching the light grey area behind the cards */
+    background-color: #f5f7fa; 
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Use a clean, common font */
+}
+
+/* 2. Container for the main layout (The entire non-sidebar area) */
+.pc-container {
+    /* Set the minimum height to ensure the background covers everything */
+    min-height: 100vh;
+    
+    /* Push the entire container to the right, past the fixed sidebar width (260px) */
+    padding: 0 20px 20px 20px; /* Padding for top, right, bottom, and inner-left */
+    margin-left: 260px; 
+    
+    /* Match the light background color visible between the cards and the sidebar/topbar */
+    background-color: #f5f7fa; 
+    
+    /* Ensure the margin change is smooth if the sidebar is toggled/collapsed */
+    transition: margin-left 0.3s ease; 
+}
+
+/* 3. Content area styles (Wrapper for all dashboard cards/reports) */
+.pcoded-content {
+    /* Remove unnecessary flex properties here unless you need them inside the content */
+    flex: none; /* Let the content flow normally */
+    display: block; 
+    
+    /* The main content area in the image doesn't have a white background block or box-shadow 
+       around all the cards; it's the container's background that's light gray.
+       We'll revert this to a standard flow. */
+    background-color: transparent; 
+    box-shadow: none; 
+    padding: 0; /* Remove padding if the cards/rows handle their own spacing */
+    margin-top: 0; /* Align content to the top */
+}
+
+/*
+|--------------------------------------------------------------------------
+| RESPONSIVE / COLLAPSED SIDEBAR ADJUSTMENTS
+|--------------------------------------------------------------------------
+*/
+
+/* Optional: Adjust layout when 'navbar-collapsed' is active (e.g., if the sidebar minimizes to 80px) */
+/* The "minimenu" class on the body is often used by dashboard templates for this */
+body.minimenu .pc-container {
+    margin-left: 80px; /* Adjust content margin for the minimized sidebar width */
+}
+
+/* Media Query for Mobile/Tablet (If the sidebar becomes a full-width overlay) */
+@media (max-width: 1024px) {
+    .pc-container {
+        /* On mobile, remove the fixed margin so content spans full width */
+        margin-left: 0;
+        padding-top: 20px; /* Add top padding if the top navigation is fixed */
+    }
+}

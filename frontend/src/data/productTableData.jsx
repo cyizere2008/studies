@@ -1,7 +1,8 @@
 // project import
-import { getImageUrl, ImagePath } from 'utils/getImageUrl';
+import { getImageUrl, ImagePath } from "../utils/getImageUrl";
+
 const GetAvatar = (name) => {
-  const photo_new = `${name}.png`;
+  const photo_new = `${name}.jpg`;
   return <img src={getImageUrl(`${photo_new}`, ImagePath.WIDGET)} alt="" className="img-20" />;
 };
 

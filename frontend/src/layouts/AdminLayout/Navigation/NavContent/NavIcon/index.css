@@ -1,0 +1,15 @@
+/* Style for the icon container */
+.pc-micon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px; /* Space between icon and text, if applicable */
+  font-size: 16px; /* Adjust size as needed */
+  color: #495057; /* Default icon color */
+  transition: color 0.2s ease;
+}
+
+/* Optional: hover effect for icons */
+.pc-micon:hover {
+  color: #007bff; /* Change color on hover */
+}

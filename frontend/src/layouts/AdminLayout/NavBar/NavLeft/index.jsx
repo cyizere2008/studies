@@ -4,6 +4,7 @@ import { ListGroup, Dropdown } from 'react-bootstrap';
 // third party
 import FeatherIcon from 'feather-icons-react';
 import { Link } from 'react-router-dom';
+import './index.css';
 
 // -----------------------|| NAV LEFT ||-----------------------//
 

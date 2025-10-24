@@ -1,0 +1,50 @@
+/* Style for the list item container */
+.pc-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.pc-item:hover {
+  background-color: #f1f1f1; /* Light hover background */
+}
+
+/* Style for active item */
+.pc-item.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style for the link inside the item */
+.pc-link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+/* Style for the text span */
+.pc-mtext {
+  margin-left: 8px;
+  font-weight: 500;
+  color: #212529;
+}
+
+/* Style for the arrow icon span */
+.pc-arrow {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+/* Optional: style for Feather icons inside arrow */
+.pc-arrow svg {
+  width: 16px;
+  height: 16px;
+}

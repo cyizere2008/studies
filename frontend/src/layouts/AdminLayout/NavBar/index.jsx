@@ -4,6 +4,7 @@ import { useContext } from 'react';
 import NavLeft from './NavLeft';
 import NavRight from './NavRight';
 import { ConfigContext } from '../../../contexts/ConfigContext';
+import './index.css';
 
 // -----------------------|| NAV BAR ||-----------------------//
 

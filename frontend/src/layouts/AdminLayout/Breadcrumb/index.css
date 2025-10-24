@@ -1,0 +1,85 @@
+/* Container for the header section */
+.page-header {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Block inside header for layout */
+.page-block {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Align items center and spacing */
+.align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+/* Title styles */
+.page-header-title h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #212529;
+}
+
+/* Breadcrumb list styles */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* Breadcrumb item styles */
+.breadcrumb-item {
+  font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #0b5ed7;
+}
+
+/* Action button styles */
+.action_button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+/* Rounded pills button */
+.btn.rounded-pill {
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+}
+
+/* Dropdown toggle button */
+.arrow-none {
+  box-shadow: none;
+  border: none;
+  padding: 5px 10px;
+}
+
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+
+/* Feather icon size */
+.feather-icon {
+  font-size: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}

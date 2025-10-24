@@ -1,56 +1,64 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
-
 import path from 'path';
+
 const resolvePath = (str) => path.resolve(__dirname, str);
 
 export default defineConfig(({ mode }) => {
+  // Load environment variables
   const env = loadEnv(mode, process.cwd(), '');
   const API_URL = `${env.VITE_APP_BASE_NAME}`;
   const PORT = 3000;
 
   return {
+    // ------------------------------------------
+    // 🚀 Development Server Settings
+    // ------------------------------------------
     server: {
-      // this ensures that the browser opens upon server start
-      open: true,
-      // this sets a default port to 3000
-      port: PORT,
-      host: true
+      open: true,   // Automatically open in browser
+      port: PORT,   // Default port
+      host: true,   // Allow LAN access
     },
+
     preview: {
       open: true,
-      host: true
+      host: true,
     },
+
+    // ------------------------------------------
+    // 🌍 Global definitions
+    // ------------------------------------------
     define: {
-      global: 'window'
+      global: 'window',
     },
+
+    // ------------------------------------------
+    // 🧩 Resolve Paths (Aliases)
+    // ------------------------------------------
     resolve: {
-      alias: [
-        // { find: '', replacement: path.resolve(__dirname, 'src') },
-        // {
-        //   find: /^~(.+)/,
-        //   replacement: path.join(process.cwd(), 'node_modules/$1')
-        // },
-        // {
-        //   find: /^src(.+)/,
-        //   replacement: path.join(process.cwd(), 'src/$1')
-        // }
-        // {
-        //   find: 'assets',
-        //   replacement: path.join(process.cwd(), 'src/assets')
-        // },
-      ]
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+        data: path.resolve(__dirname, './src/data'),
+        components: path.resolve(__dirname, './src/components'),
+        views: path.resolve(__dirname, './src/views'),
+        assets: path.resolve(__dirname, './src/assets'),
+        utils: path.resolve(__dirname, './src/utils'),
+      },
     },
+
+    // ------------------------------------------
+    // 🎨 CSS & Preprocessor Options
+    // ------------------------------------------
     css: {
       preprocessorOptions: {
         scss: {
           charset: false,
-          quietDeps: true  // Added to suppress Sass deprecation warnings from dependencies like Bootstrap
+          quietDeps: true, // suppress Bootstrap Sass warnings
         },
         less: {
-          charset: false
-        }
+          charset: false,
+        },
       },
       charset: false,
       postcss: {
@@ -59,25 +67,39 @@ export default defineConfig(({ mode }) => {
             postcssPlugin: 'internal:charset-removal',
             AtRule: {
               charset: (atRule) => {
-                if (atRule.name === 'charset') {
-                  atRule.remove();
-                }
-              }
-            }
-          }
-        ]
-      }
+                if (atRule.name === 'charset') atRule.remove();
+              },
+            },
+          },
+        ],
+      },
     },
+
+    // ------------------------------------------
+    // ⚙️ Build Options
+    // ------------------------------------------
     build: {
       chunkSizeWarningLimit: 1600,
       rollupOptions: {
         input: {
           main: resolvePath('index.html'),
-          legacy: resolvePath('index.html')
-        }
-      }
+          legacy: resolvePath('index.html'),
+        },
+      },
     },
+
+    // ------------------------------------------
+    // 🌐 Base Path
+    // ------------------------------------------
     base: API_URL,
-    plugins: [react(), tsconfigPaths()]
+
+    // ------------------------------------------
+    // 🔌 Plugins
+    // ------------------------------------------
+    plugins: [
+      react(),
+      tsconfigPaths(), // enables TS path alias resolution
+    ],
   };
 });
+

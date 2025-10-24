@@ -5,16 +5,16 @@ import { Row, Col, Card } from 'react-bootstrap';
 import Chart from 'react-apexcharts';
 
 // project imports
-import FlatCard from 'components/Widgets/Statistic/FlatCard';
-import ProductCard from 'components/Widgets/Statistic/ProductCard';
-import FeedTable from 'components/Widgets/FeedTable';
-import ProductTable from 'components/Widgets/ProductTable';
+import FlatCard from '../../../components/Widgets/Statistic/FlatCard';
+import ProductCard from '../../../components/Widgets/Statistic/ProductCard';
+import FeedTable from '../../../components/Widgets/FeedTable';
+import ProductTable from '../../../components/Widgets/ProductTable';
 import { SalesCustomerSatisfactionChartData } from './chart/sales-customer-satisfication-chart';
 import { SalesAccountChartData } from './chart/sales-account-chart';
 import { SalesSupportChartData } from './chart/sales-support-chart';
 import { SalesSupportChartData1 } from './chart/sales-support-chart1';
-import feedData from 'data/feedData';
-import productData from 'data/productTableData';
+import feedData from '../../../data/feedData';
+import productData from '../../../data/productTableData';
 
 // -----------------------|| DASHBOARD SALES ||-----------------------//
 export default function DashSales() {

@@ -1,0 +1,58 @@
+/* Style for the caption list item */
+.pc-caption {
+  padding: 12px 16px;
+  background-color: #f8f9fa; /* Light background for caption */
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Style for the label within caption */
+.pc-caption label {
+  margin-bottom: 4px;
+  color: #495057;
+}
+
+/* Style for the subtitle span inside caption */
+.pc-caption span {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+/* Style for each nav item (list item) */
+.pc-item {
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for nav items */
+.pc-item:hover {
+  background-color: #e9ecef; /* Light hover background */
+}
+
+/* Optional: style for active or selected nav item */
+.pc-item.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Additional styles for nested list group items (if needed) */
+.pc-item ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style: none;
+}
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  /* Adjust padding or font sizes for smaller screens */
+  .pc-caption {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

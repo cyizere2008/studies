@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './index.css';
 // -----------------------|| NAV ICON ||-----------------------//
 
 export default function NavIcon({ items }) {

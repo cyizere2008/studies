@@ -10,6 +10,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { ConfigContext } from '../../contexts/ConfigContext';
 import * as actionType from '../../store/actions';
 import Loader from '../../components/Loaders/Loader';
+import './index.css';
 
 // -----------------------|| ADMIN LAYOUT ||-----------------------//
 

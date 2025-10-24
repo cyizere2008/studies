@@ -1,0 +1,71 @@
+/* Container styles for list items */
+.pc-item {
+  list-style: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.pc-item:hover {
+  background-color: #f0f0f0; /* Hover background */
+}
+
+/* Link styles */
+.pc-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+}
+
+/* Active state styles */
+.pc-item.active,
+.pc-link.active {
+  background-color: #007bff; /* Active background */
+  color: #fff;
+}
+
+/* Icon styles (NavIcon container) */
+.pc-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Arrow icon styles */
+.pc-arrow {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Submenu styles */
+.pc-submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+  display: none;
+}
+
+.pc-submenu.show {
+  display: block;
+}
+
+/* Specific styles for active submenu items */
+.pc-submenu li.active {
+  background-color: #0069d9;
+  color: #fff;
+}
+
+/* Additional styles for collapsible trigger */
+.pc-trigger {
+  font-weight: bold;
+}
+
+/* Responsive styles (optional) */
+@media (max-width: 992px) {
+  /* For mobile view, you might want to collapse or expand submenu */
+}

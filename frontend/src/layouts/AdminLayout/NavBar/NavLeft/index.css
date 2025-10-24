@@ -1,0 +1,80 @@
+/* Style for list group items */
+.pc-h-item {
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-left: auto;
+}
+
+/* Hover effect for menu items */
+.pc-h-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Style for dropdown toggle link */
+.pc-head-link {
+  display: flex;
+  align-items: left;
+  width: 100%;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #212529;
+  font-weight: 500;
+}
+
+/* Style for dropdown menu */
+.pc-h-dropdown {
+  min-width: 200px;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+  margin-top: 4px;
+  z-index: 1050;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+/* Styles for nested level menu */
+.pc-level-menu {
+  padding-left: 20px;
+  border-left: 2px solid #e0e0e0;
+  margin-top: 8px;
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Icon styles inside dropdown items */
+.dropdown-item i {
+  font-size: 18px;
+  margin-right: 10px;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Style for the arrow icon in level menus */
+.me-0 {
+  margin: 0;
+}
+
+/* Style for the span with class "float-end" inside level menu items */
+.float-end {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Optional: customize the icons (material-icons-two-tone, fas, etc.) with colors or sizes if needed */

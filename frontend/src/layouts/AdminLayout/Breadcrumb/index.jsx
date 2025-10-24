@@ -10,6 +10,7 @@ import FeatherIcon from 'feather-icons-react';
 // project imports
 import navigation from '../../../menu-items';
 import { BASE_TITLE } from '../../../config/constant';
+import './index.css';
 
 // -----------------------|| BREADCRUMB ||-----------------------//
 

@@ -15,6 +15,7 @@ import NavIcon from '../NavIcon';
 import { ConfigContext } from '../../../../../contexts/ConfigContext';
 import * as actionType from '../../../../../store/actions';
 import useWindowSize from '../../../../../hooks/useWindowSize';
+import './index.css';
 
 // -----------------------|| NAV COLLAPSE ||-----------------------//
 

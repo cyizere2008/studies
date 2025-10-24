@@ -1,0 +1,84 @@
+/* Container for the mobile header */
+.pc-mob-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1030;
+}
+
+/* Logo styles */
+.pcm-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+
+
+/* Toolbar container */
+.pcm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Link styles for icons/buttons */
+.pc-head-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pc-head-link:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.05);
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-box {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  transition: all 0.3s ease;
+  transform: translateY(-50%);
+}
+
+/* Feather icon size customization (if needed) */
+.feather-icon {
+  font-size: 20px;
+  color: #333;
+}
