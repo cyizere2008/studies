@@ -1,71 +1,104 @@
-/* Style for list group items */
+ .list-unstyled{
+  margin-left: 500px;
+
+ }
+ 
+ /* Style for list group items with hover effects */
 .pc-h-item {
-  padding: 8px 12px;
+  padding: 10px 16px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-left: auto;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-left: 400px;
+  border-radius: 6px;
 }
 
-/* Hover effect for menu items */
 .pc-h-item:hover {
-  background-color: #f8f9fa;
+  background-color: #e0f7fa; /* Light teal background on hover */
+  transform: translateX(2px); /* Slight shift on hover for effect */
 }
 
 /* Style for dropdown toggle link */
 .pc-head-link {
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   width: 100%;
   justify-content: space-between;
   text-decoration: none;
   color: #212529;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin-left: 300px;
+  border-radius: 8px;
+}
+
+.pc-head-link:hover {
+  background-color: #f1f1f1; /* Slight background on hover */
+  color: #007bff; /* Change text color for emphasis */
 }
 
 /* Style for dropdown menu */
 .pc-h-dropdown {
-  min-width: 200px;
-  padding: 0;
+  min-width: 220px;
+  padding: 8px 0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  background-color: #fff;
-  margin-top: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  margin-top: 8px;
   z-index: 1050;
   overflow: hidden;
-  margin-left: auto;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Styles for nested level menu */
+.pc-h-dropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pc-h-dropdown::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+/* Nested menu styles for better indentation and separation */
 .pc-level-menu {
   padding-left: 20px;
-  border-left: 2px solid #e0e0e0;
+  border-left: 3px solid #dee2e6;
   margin-top: 8px;
+  padding-top: 8px;
 }
 
-/* Style for dropdown items */
+/* Style for dropdown items with icons and hover effect */
 .dropdown-item {
   display: flex;
   align-items: center;
-  padding: 8px 12px;
-  font-size: 14px;
-  transition: background-color 0.2s ease;
+  padding: 10px 16px;
+  font-size: 15px;
+  transition: background-color 0.2s, transform 0.1s;
+  border-radius: 4px;
 }
 
 .dropdown-item:hover {
-  background-color: #f1f1f1;
+  background-color: #f8f9fa;
+  transform: translateX(2px);
 }
 
 /* Icon styles inside dropdown items */
 .dropdown-item i {
-  font-size: 18px;
-  margin-right: 10px;
+  font-size: 20px;
+  margin-right: 12px;
   min-width: 24px;
   text-align: center;
+  color: #495057;
+  transition: color 0.2s;
 }
 
-/* Style for the arrow icon in level menus */
+.dropdown-item:hover i {
+  color: #007bff; /* Change icon color on hover for emphasis */
+}
+
+/* Style for arrow icons in nested menus */
 .me-0 {
   margin: 0;
 }
@@ -77,4 +110,4 @@
   align-items: center;
 }
 
-/* Optional: customize the icons (material-icons-two-tone, fas, etc.) with colors or sizes if needed */
+/* Optional: add icons with color and size enhancements */

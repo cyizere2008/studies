@@ -1,93 +1,132 @@
-/* Style for each list item container */
+ 
+ .list-unstyled{
+  display: flex;
+  margin-inline-start: 90px;
+ }
+ /* Container items */
 .pc-h-item {
   padding: 8px 12px;
   display: flex;
-  align-items: center;
+  margin-inline-start: 30px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  border-radius: 8px;
 }
 
 .pc-h-item:hover {
-  background-color: #f8f9fa; /* Light hover background */
+  background-color: #ebe6e6; /* Light hover background */
+  transform: translateX(-2px);
 }
 
 /* Style for the dropdown toggle links */
 .pc-head-link {
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.2s;
 }
 
-/* Remove default arrow indicator if any */
-.arrow-none {
-  position: relative;
+.pc-head-link:hover {
+  background-color: #e0f7fa; /* Soft teal background on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.arrow-none::after {
-  display: none;
+.pc-head-links {
+  display: flex;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s, box-shadow 0.2s;
 }
 
-/* Style for user avatar image */
+.pc-head-links:hover {
+  background-color: #e0f7fa; /* Soft teal background on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* User avatar styles */
 .user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-right: 300px;
+  border-radius: 30px;
   object-fit: cover;
-  margin-right: 8px;
   border: 2px solid #dee2e6;
+  transition: box-shadow 0.2s;
 }
 
-/* Style for user name span */
+.user-avatar:hover {
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* User info */
 .user-name {
   font-weight: 600;
   font-size: 14px;
-  margin-bottom: 2px;
   display: block;
-  color: #212529;
 }
 
-/* Style for user description span */
 .user-desc {
   font-size: 12px;
   color: #6c757d;
-  display: block;
 }
 
-/* Style for dropdown menu */
+/* Dropdown menu styles */
 .pc-h-dropdown {
-  min-width: 200px;
-  padding: 0;
+  min-width: 240px;
+  padding: 8px 0;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   background-color: #fff;
+  margin-top: 8px;
   z-index: 1050;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 
-/* Style for the header badge in the profile header */
-.pro-head {
-  padding: 12px 16px;
+/* Dropdown items styling */
+.dropdown-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #e9ecef;
+  padding: 10px 20px;
+  font-size: 14px;
+  transition: background-color 0.2s, transform 0.1s;
+  border-radius: 6px;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  transform: translateX(2px);
+}
+
+/* Icons inside dropdown items */
+.dropdown-item i {
+  font-size: 20px;
+  margin-right: 12px;
+  min-width: 24px;
+  text-align: center;
+  color: #495057;
+  transition: color 0.2s;
+}
+
+.dropdown-item:hover i {
+  color: #007bff; /* Icon color change on hover */
 }
 
 /* Badge styles */
-.badge {
-  font-size: 12px;
-  padding: 4px 8px;
+.pro-head .badge {
+  font-size: 11px;
+  padding: 3px 8px;
   border-radius: 12px;
 }
 
-/* Additional styles for icons inside dropdown items */
-.dropdown-item i {
-  margin-right: 8px;
-  font-size: 16px;
-  color: #6c757d;
-}
-
-/* Optional: hover effect for dropdown items */
-.dropdown-item:hover {
-  background-color: #f1f1f1;
+/* Additional hover effects for overall items */
+.drp-search {
+  padding: 0 16px;
 }

@@ -1,26 +1,35 @@
-/* Sidebar styles */
+/* === SIDEBAR === */
 .dark-sidebar {
-  background-color: #222; /* example background, adjust as needed */
+  background-color: #222;
   width: 250px;
   height: 100vh;
-  transition: width 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   overflow-y: auto;
+  transition: width 0.3s ease;
+  color: #fff;
 }
 
-/* Additional class for the sidebar when collapsed or active */
-
-
+/* When sidebar is collapsed */
 .navbar-collapsed {
-  width: 80px; /* collapsed width */
+  width: 80px;
 }
 
+/* === MAIN CONTENT AREA === */
+.main-content {
+  margin-left: 250px; /* same as sidebar width */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
 
+/* When sidebar is collapsed */
+.sidebar-collapsed + .main-content {
+  margin-left: 80px;
+}
 
-/* Overlay style for mobile menu */
+/* === MOBILE OVERLAY === */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -30,10 +39,30 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   cursor: pointer;
+  display: none; /* hidden by default */
 }
 
-/* Wrapper inside the nav */
+/* === NAVBAR WRAPPER === */
 .navbar-wrapper {
   padding: 16px;
-  /* add more styling as needed */
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .dark-sidebar {
+    position: fixed;
+    left: -250px;
+  }
+
+  .dark-sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-overlay.active {
+    display: block;
+  }
 }

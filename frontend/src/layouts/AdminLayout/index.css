@@ -20,7 +20,7 @@ body {
     
     /* Push the entire container to the right, past the fixed sidebar width (260px) */
     padding: 0 20px 20px 20px; /* Padding for top, right, bottom, and inner-left */
-    margin-left: 260px; 
+    margin-left: 350px; 
     
     /* Match the light background color visible between the cards and the sidebar/topbar */
     background-color: #f5f7fa; 

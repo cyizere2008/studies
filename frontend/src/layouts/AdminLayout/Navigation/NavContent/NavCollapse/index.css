@@ -4,7 +4,7 @@
   padding: 8px 16px;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  align-items: left;
   transition: background-color 0.2s ease;
 }
 
