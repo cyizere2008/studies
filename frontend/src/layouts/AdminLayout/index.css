@@ -1,66 +1,154 @@
-/*
-|--------------------------------------------------------------------------
-| MAIN LAYOUT / CONTENT AREA STYLES
-|--------------------------------------------------------------------------
-*/
-
-/* 1. Body/Root Styles (Ensure full height and correct background) */
-body {
-    /* Set the main background color for the entire page, matching the light grey area behind the cards */
-    background-color: #f5f7fa; 
+/* =========================================================
+   RESET
+========================================================= */
+html, body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* Use a clean, common font */
+    height: 100%;
+    background: #f6f8fb;
+    overflow-x: hidden;
 }
 
-/* 2. Container for the main layout (The entire non-sidebar area) */
-.pc-container {
-    /* Set the minimum height to ensure the background covers everything */
-    min-height: 100vh;
-    
-    /* Push the entire container to the right, past the fixed sidebar width (260px) */
-    padding: 0 20px 20px 20px; /* Padding for top, right, bottom, and inner-left */
-    margin-left: 350px; 
-    
-    /* Match the light background color visible between the cards and the sidebar/topbar */
-    background-color: #f5f7fa; 
-    
-    /* Ensure the margin change is smooth if the sidebar is toggled/collapsed */
-    transition: margin-left 0.3s ease; 
+/* =========================================================
+   TOP NAVBAR
+========================================================= */
+.navbar,
+.pc-navbar,
+.top-navbar,
+.admin-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 25px;
+    z-index: 998;
+
+    /* shift right due to sidebar */
+    padding-left: 260px;
 }
 
-/* 3. Content area styles (Wrapper for all dashboard cards/reports) */
+.minimenu .navbar,
+.minimenu .pc-navbar {
+    padding-left: 100px;
+}
+
+/* =========================================================
+   LEFT SIDEBAR (Unified from your two versions)
+========================================================= */
+.navigation,
+.dark-sidebar { /* merge both systems */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    min-width: 260px;
+    height: 100vh;
+
+    background: #101827; /* dark gray-blue */
+    color: #fff;
+
+    padding-top: 70px; /* under navbar */
+    overflow-y: auto;
+
+    z-index: 992;
+    transition: all 0.3s ease;
+}
+
+/* COLLAPSED SIDEBAR */
+.minimenu .navigation,
+.navbar-collapsed,
+.minimenu .dark-sidebar {
+    width: 80px !important;
+    min-width: 80px !important;
+}
+
+/* =========================================================
+   MOBILE SLIDE-IN (from your first code)
+========================================================= */
+@media (max-width: 992px) {
+    .navigation,
+    .dark-sidebar {
+        left: -260px;
+    }
+
+    .navigation.active,
+    .dark-sidebar.active {
+        left: 0;
+    }
+}
+
+/* =========================================================
+   MOBILE OVERLAY
+========================================================= */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 991;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+.pc-container,
+.main-content { /* merge both systems */
+    margin-left: 300px;
+    padding-top: 80px;
+    transition: margin-left 0.3s ease;
+}
+
+.minimenu .pc-container,
+.minimenu .main-content {
+    margin-left: 80px;
+}
+
 .pcoded-content {
-    /* Remove unnecessary flex properties here unless you need them inside the content */
-    flex: none; /* Let the content flow normally */
-    display: block; 
-    
-    /* The main content area in the image doesn't have a white background block or box-shadow 
-       around all the cards; it's the container's background that's light gray.
-       We'll revert this to a standard flow. */
-    background-color: transparent; 
-    box-shadow: none; 
-    padding: 0; /* Remove padding if the cards/rows handle their own spacing */
-    margin-top: 0; /* Align content to the top */
+    padding: 25px;
+    background: #f6f8fb;
+    min-height: calc(100vh - 80px);
+    overflow-y: auto;
 }
 
-/*
-|--------------------------------------------------------------------------
-| RESPONSIVE / COLLAPSED SIDEBAR ADJUSTMENTS
-|--------------------------------------------------------------------------
-*/
-
-/* Optional: Adjust layout when 'navbar-collapsed' is active (e.g., if the sidebar minimizes to 80px) */
-/* The "minimenu" class on the body is often used by dashboard templates for this */
-body.minimenu .pc-container {
-    margin-left: 80px; /* Adjust content margin for the minimized sidebar width */
+/* Scrollbar */
+.pcoded-content::-webkit-scrollbar {
+    width: 8px;
+}
+.pcoded-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 5px;
 }
 
-/* Media Query for Mobile/Tablet (If the sidebar becomes a full-width overlay) */
-@media (max-width: 1024px) {
-    .pc-container {
-        /* On mobile, remove the fixed margin so content spans full width */
-        margin-left: 0;
-        padding-top: 20px; /* Add top padding if the top navigation is fixed */
+/* =========================================================
+   MOBILE MAIN CONTENT SHIFT
+========================================================= */
+@media (max-width: 992px) {
+    .pc-container,
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .navbar {
+        padding-left: 0 !important;
     }
 }

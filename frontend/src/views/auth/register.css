@@ -1,0 +1,40 @@
+/* --- Global Wrapper Styling --- */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f9fc; 
+}
+
+/* --- Content Container Styling --- */
+.auth-content {
+    max-width: 400px;
+    width: 90%; 
+}
+
+/* --- Custom Text/Link Colors (Matching the Success Button) --- */
+.text-app-success {
+    color: #198754; /* Standard Bootstrap Success Color */
+}
+
+/* Styling for the sign-up link hover */
+.text-app-success:hover {
+    color: #157347;
+}
+
+/* Optional: Custom styling for the input group text background */
+.input-group-text-custom {
+    background-color: #e9ecef !important;
+    border-right: none !important;
+}
+
+/* Optional: Custom border on form controls to blend with the InputGroup text */
+.form-control-custom {
+    border-left: none !important;
+}
+
+/* Optional: Card custom border radius */
+.card-rounded {
+    border-radius: 0.5rem !important; 
+}

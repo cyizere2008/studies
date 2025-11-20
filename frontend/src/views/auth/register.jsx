@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import './register.css';
 
 // react-bootstrap
 import { Card, Row, Col, Button, InputGroup, Form } from 'react-bootstrap';
@@ -7,7 +8,7 @@ import { Card, Row, Col, Button, InputGroup, Form } from 'react-bootstrap';
 import FeatherIcon from 'feather-icons-react';
 
 // assets
-import logoDark from 'assets/images/logo-dark.svg';
+import logoDark from '../../assets/images/logo-dark.svg';
 
 // -----------------------|| SignUp 1 ||-----------------------//
 

@@ -1,68 +1,42 @@
-/* === SIDEBAR === */
-.dark-sidebar {
-  background-color: #222;
-  width: 250px;
-  height: 100vh;
-  position: fixed;
+/* ===================== LEFT SIDEBAR ===================== */
+.navigation {
+  position: fixed;       /* fixed to left */
   top: 0;
   left: 0;
-  z-index: 1000;
-  overflow-y: auto;
-  transition: width 0.3s ease;
+  width: 260px;          /* default width */
+  min-width: 260px;
+  height: 100vh;         /* full height */
+  background-color: #222; /* dark theme */
   color: #fff;
+  overflow-y: auto;      /* scrollable */
+  transition: width 0.3s ease, left 0.3s ease;
+  z-index: 1000;
+  padding-top: 70px;     /* space under navbar */
 }
 
-/* When sidebar is collapsed */
-.navbar-collapsed {
-  width: 80px;
+/* Collapsed sidebar */
+.minimenu .navigation,
+.navigation.navbar-collapsed {
+  width: 80px !important;
+  min-width: 80px !important;
 }
 
-/* === MAIN CONTENT AREA === */
-.main-content {
-  margin-left: 250px; /* same as sidebar width */
-  padding: 20px;
-  transition: margin-left 0.3s ease;
+/* Scrollbar style */
+.navigation::-webkit-scrollbar {
+  width: 6px;
+}
+.navigation::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
 }
 
-/* When sidebar is collapsed */
-.sidebar-collapsed + .main-content {
-  margin-left: 80px;
-}
-
-/* === MOBILE OVERLAY === */
-.menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  cursor: pointer;
-  display: none; /* hidden by default */
-}
-
-/* === NAVBAR WRAPPER === */
-.navbar-wrapper {
-  padding: 16px;
-}
-
-/* === RESPONSIVE === */
+/* ===================== MOBILE ===================== */
 @media (max-width: 768px) {
-  .dark-sidebar {
-    position: fixed;
-    left: -250px;
+  .navigation {
+    left: -260px;       /* hide sidebar off-screen */
   }
 
-  .dark-sidebar.active {
-    left: 0;
-  }
-
-  .main-content {
-    margin-left: 0;
-  }
-
-  .menu-overlay.active {
-    display: block;
+  .navigation.active {
+    left: 0;            /* slide-in */
   }
 }

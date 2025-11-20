@@ -1,4 +1,6 @@
-/* Container for the mobile header */
+/* =========================================================
+   MOBILE HEADER
+========================================================= */
 .pc-mob-header {
   display: flex;
   align-items: center;
@@ -6,11 +8,14 @@
   padding: 10px 20px;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 1030;
 }
 
-/* Logo styles */
+/* Logo */
 .pcm-logo {
   display: flex;
   align-items: center;
@@ -21,8 +26,6 @@
   width: auto;
 }
 
-
-
 /* Toolbar container */
 .pcm-toolbar {
   display: flex;
@@ -30,7 +33,7 @@
   gap: 15px;
 }
 
-/* Link styles for icons/buttons */
+/* Toolbar links / icons */
 .pc-head-link {
   display: flex;
   align-items: center;
@@ -48,21 +51,20 @@
   transform: scale(1.05);
 }
 
-/* Hamburger menu styles */
+/* Hamburger menu */
 .hamburger {
   width: 24px;
   height: 24px;
-  position: relative;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hamburger-box {
   width: 24px;
   height: 24px;
-  display: inline-block;
   position: relative;
 }
 
@@ -77,8 +79,43 @@
   transform: translateY(-50%);
 }
 
-/* Feather icon size customization (if needed) */
+/* Feather icons */
 .feather-icon {
   font-size: 20px;
   color: #333;
+}
+
+/* =========================================================
+   MOBILE SIDEBAR & OVERLAY
+========================================================= */
+@media (max-width: 992px) {
+
+  /* Hide sidebar offscreen */
+  .navigation,
+  .dark-sidebar {
+    left: -260px;
+    transition: left 0.3s ease;
+  }
+
+  /* Show sidebar when active */
+  .navigation.active,
+  .dark-sidebar.active {
+    left: 0;
+  }
+
+  /* Show overlay when sidebar active */
+  .menu-overlay {
+    display: none; /* default hidden */
+  }
+
+  .menu-overlay.active {
+    display: block;
+  }
+
+  /* Expand main content full width when sidebar hidden */
+  .pc-container,
+  .main-content {
+    margin-left: 0 !important;
+    padding-top: 70px; /* account for mobile header */
+  }
 }

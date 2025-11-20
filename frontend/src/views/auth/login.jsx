@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import './login.css';
 
 // react-bootstrap
 import { Card, Row, Col, Button, Form, InputGroup } from 'react-bootstrap';
@@ -7,10 +8,10 @@ import { Card, Row, Col, Button, Form, InputGroup } from 'react-bootstrap';
 import FeatherIcon from 'feather-icons-react';
 
 // assets
-import logoDark from 'assets/images/logo-dark.svg';
+import logoDark from '../../assets/images/logo-dark.svg';
 
 // -----------------------|| SIGNIN 1 ||-----------------------//
-
+  
 export default function SignIn1() {
   return (
     <div className="auth-wrapper">

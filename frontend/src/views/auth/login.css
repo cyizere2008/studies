@@ -1,0 +1,94 @@
+/* =============== GLOBAL WRAPPER =============== */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #e3f2fd, #f9fbe7);
+    padding: 25px;
+}
+
+/* =============== CONTENT CARD =============== */
+.auth-content {
+    max-width: 420px;
+    width: 100%;
+    background: linear-gradient( #656666, #6f7066, #9ab0c0, #74775b,#171819, #c2c5a4);
+    background-color: linear-gradient( #e3f2fd, #f9fbe7) ;
+}
+
+.card-rounded {
+    border-radius: 7px !important;
+}
+
+.card-animate {
+    animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+}
+
+/* =============== TYPOGRAPHY =============== */
+h3 {
+    font-weight: 700 !important;
+}
+
+/* Custom success text (links) */
+.text-app-success {
+    color: #198754;
+    font-weight: 600;
+}
+
+.text-app-success:hover {
+    color: #157347;
+    text-decoration: underline;
+}
+
+/* =============== INPUT GROUP =============== */
+.input-group-text-custom {
+    background-color: #eef2f4 !important;
+    border-right: none !important;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.form-control-custom {
+    border-left: none !important;
+    transition: all 0.25s ease !important;
+}
+
+.form-control-custom:focus {
+    border-color: #198754 !important;
+    box-shadow: 0 0 0 0.15rem rgba(25, 135, 84, 0.25) !important;
+}
+
+.input-shadow {
+    transition: 0.3s ease;
+}
+
+.input-shadow:focus-within {
+    transform: translateY(-2px);
+}
+
+/* =============== BUTTONS =============== */
+.btn-animated {
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-animated:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.25) !important;
+}

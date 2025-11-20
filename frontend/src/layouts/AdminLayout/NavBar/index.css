@@ -1,28 +1,26 @@
-/* Style for the header */
+/* ===================== PC HEADER / NAVBAR ===================== */
 .pc-header {
   display: flex;
   align-items: center;
   padding: 0 16px;
   height: 60px;
-  background-color: #ffffff; /* Default background, can be overridden by headerBackColor */
+  background-color: #ffffff; /* default */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 260px); /* shift right for sidebar */
+  transition: all 0.3s ease; /* smooth shift/resizing */
   z-index: 1000;
 }
 
-/* Background color variants (add your color classes or styles) */
-.header-back-color {
-  /* Example: */
-  background-color: #f8f9fa; 
+/* --------------------- COLLAPSED SIDEBAR --------------------- */
+.minimenu .pc-header {
+  width: calc(100% - 80px); /* sidebar shrinks to 80px */
 }
 
-/* Active class when header is collapsed on mobile */
-.mob-header-active {
-  /* Example: */
-   background-color: #e0e0e0; 
-}
-
-/* Wrapper for header content */
+/* ===================== HEADER CONTENT WRAPPER ===================== */
 .header-wrapper {
   display: flex;
   width: 100%;
@@ -30,26 +28,33 @@
   justify-content: space-between;
 }
 
-/* Styles for the left menu container */
+/* Left menu container */
 .me-auto.pc-mob-drp {
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
 }
 
-/* Active class for mobile dropdown */
-.mob-drp-active {
-  /* Example: */
-  background-color: #f1f1f1; 
-}
-
-/* Styles for the right menu or icons */
+/* Right menu/icons */
 .ms-auto {
   display: flex;
   align-items: center;
 }
 
-/* Overlay shown when menus are collapsed */
+/* ===================== BACKGROUND VARIANTS ===================== */
+.header-back-color {
+  background-color: #f8f9fa;
+}
+
+.mob-header-active {
+  background-color: #e0e0e0;
+}
+
+.mob-drp-active {
+  background-color: #f1f1f1;
+}
+
+/* ===================== OVERLAY ===================== */
 .pc-md-overlay {
   position: fixed;
   top: 0;
@@ -58,5 +63,4 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  /* Optional: add transition or animation */
 }
