@@ -5,36 +5,32 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #f6f8fb;
+    background: #a9a9b0;
     overflow-x: hidden;
 }
 
 /* =========================================================
-   TOP NAVBAR
+   TOP NAVBAR (Works with Sidebar)
 ========================================================= */
 .navbar,
 .pc-navbar,
 .top-navbar,
 .admin-navbar {
-    position: fixed;
-    top: 0;
+    position: relative;
+    margin-top: 70px;
     left: 0;
 
-    width: 100%;
     height: 70px;
-
+    width: 100%;
     background: #fff;
-    border-bottom: 1px solid #e5e7eb;
-
-    display: flex;
-    align-items: center;
     justify-content: flex-end;
 
     padding: 0 25px;
-    z-index: 998;
+    padding-left: 250px;      /* space for sidebar */
+    border-bottom: 1px solid #e5e7eb;
 
-    /* shift right due to sidebar */
-    padding-left: 260px;
+    z-index: 998;
+    transition: padding-left 0.3s ease;
 }
 
 .minimenu .navbar,
@@ -47,7 +43,7 @@ html, body {
 ========================================================= */
 .navigation,
 .dark-sidebar { /* merge both systems */
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
 
@@ -76,7 +72,7 @@ html, body {
 /* =========================================================
    MOBILE SLIDE-IN (from your first code)
 ========================================================= */
-@media (max-width: 992px) {
+@media (max-width: 1600px) {
     .navigation,
     .dark-sidebar {
         left: -260px;
@@ -93,12 +89,12 @@ html, body {
 ========================================================= */
 .menu-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: -10;
 
     width: 100%;
-    height: 100%;
-    display: none;
+    height: 10%;
+    display: block;
 
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 991;
@@ -113,8 +109,8 @@ html, body {
 ========================================================= */
 .pc-container,
 .main-content { /* merge both systems */
-    margin-left: 300px;
-    padding-top: 80px;
+    margin-left: 350px;
+    padding-top: 10px;
     transition: margin-left 0.3s ease;
 }
 

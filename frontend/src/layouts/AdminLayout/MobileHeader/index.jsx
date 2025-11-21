@@ -10,7 +10,7 @@ import * as actionType from '../../../store/actions';
 
 // assets
 import logo from '../../../assets/images/logo.svg';
-import './index.css';
+// import './index.css';
 
 // -----------------------|| MOBILE HEADER ||-----------------------//
 
