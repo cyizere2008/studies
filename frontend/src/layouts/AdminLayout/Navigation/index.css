@@ -1,6 +1,6 @@
 /* ===================== LEFT SIDEBAR ===================== */
 .navigation {
-  position: fixed;       /* fixed to left */
+  position: relative;       /* fixed to left */
   top: 0;
   left: 0;
   width: 260px;          /* default width */

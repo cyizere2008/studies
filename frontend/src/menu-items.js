@@ -1,29 +1,32 @@
+import './menu.css'
+
 // Menu configuration for default layout
 const menuItems = {
   items: [
     {
-      id: 'navigation',
-      title: 'Navigation',
-      type: 'group',
-      icon: 'icon-navigation',
+   id: 'navigation',
+   title: 'Navigation',
+   type: 'group',
+   icon: 'icon-navigation',
+   children: [
+    {
+      id: 'dashboard',
+      title: 'Dashboard',
+      type: 'collapse',
+      icon: 'material-icons-two-tone',
+      icon_name: 'home',
       children: [
         {
-          id: 'dashboard',
-          title: 'Dashboard',
-          type: 'collapse',
-          icon: 'material-icons-two-tone',
-          iconname: 'home',
-          children: [
-            {
-              id: 'sales',
-              title: 'Sales',
-              type: 'item',
-              url: '/dashboard/sales'
-            }
-          ]
+          id: 'sales',
+          title: 'Sales',
+          type: 'item',
+          url: '/dashboard/sales'
         }
       ]
+     }
+     ]
     },
+
     {
       id: 'ui-element',
       title: 'ELEMENTS',
