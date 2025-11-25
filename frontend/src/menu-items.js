@@ -38,6 +38,7 @@ const menuItems = {
           id: 'typography',
           title: 'Typography',
           type: 'item',
+          style: 'font_size:10px,',
           icon: 'material-icons-two-tone',
           iconname: 'text_fields',
           url: '/typography'

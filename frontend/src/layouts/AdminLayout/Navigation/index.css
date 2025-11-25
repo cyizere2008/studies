@@ -1,41 +1,69 @@
-/* ===================== LEFT SIDEBAR ===================== */
-.navigation {
-  position: relative;       /* fixed to left */
-  top: 0;
-  left: 0;
-  width: 260px;          /* default width */
-  max-width: 260px;
-  height: 100vh;         /* full height */
-  background-color: #222; /* dark theme */
-  color: #fff;     /* scrollable */
-  transition: width 0.3s ease, left 0.3s ease;
-  z-index: 1000;
-     /* space under navbar */
-}
-
-/* Collapsed sidebar */
-.minimenu .navigation,
-.navigation.navbar-collapsed {
-  width: 80px !important;
-  min-width: 80px !important;
-}
-
-/* Scrollbar style */
-.navigation::-webkit-scrollbar {
-  width: 6px;
-}
-.navigation::-webkit-scrollbar-thumb {
-  background: #555;
+/* Main container */
+.sidebar-container {
+  width: 340px;
+  background-color: #1e1f26;
+  padding: 0;
   border-radius: 4px;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow: hidden; /* prevent double scroll */
 }
 
-/* ===================== MOBILE ===================== */
-@media (max-width: 768px) {
-  .navigation {
-    left: -260px;       /* hide sidebar off-screen */
-  }
+/* Scrollable inner sidebar */
+.sidebar {
+  margin-top: 50PX;
+  height: 100%;
+  text-align: center;                /* full height */
+  overflow-y: scroll;            /* <-- makes sidebar scrollable */
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1f26;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
 
-  .navigation.active {
-    left: 0;            /* slide-in */
-  }
+/* Logo */
+.sidebar-logo {
+  width: 160px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Section spacing */
+.sidebar-section {
+  margin: 25px 0;
+}
+
+/* Section title */
+.sidebar-section h4 {
+  color: #7188dd;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+/* Links */
+.sidebar-section a {
+  display: block;
+  text-decoration: none;
+  color: #8e8b8b;
+  font-size: 15px;
+  padding: 4px 0;
+  margin-left: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.sidebar-section a:hover {
+  color: #ffffff;
+  margin-left: 14px;
+}
+
+/* Active style (optional) */
+.sidebar-section a.active {
+  color: #4a78ff;
+  font-weight: bold;
 }

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 // project imports
 import NavContent from './NavContent';
@@ -7,46 +8,50 @@ import useWindowSize from '../../../hooks/useWindowSize';
 import navigation from '../../../menu-items';
 import navitemcollapse from '../../../menu-items-collapse';
 import * as actionType from '../../../store/actions';
-import '../../../menu.css';
+import './index.css';
 
 // assets
 import avatar2 from '../../../assets/images/user/avatar-2.jpg';
+import Logo from '../../../assets/images/logo.svg';
 
 // -----------------------|| NAVIGATION ||-----------------------//
 
 export default function Navigation() {
-  const configContext = useContext(ConfigContext);
-  const { collapseMenu, collapseLayout } = configContext.state;
-  const windowSize = useWindowSize();
-  const { dispatch } = configContext;
-
-  const navToggleHandler = () => {
-    dispatch({ type: actionType.COLLAPSE_MENU });
-  };
-
-  let navClass = 'dark-sidebar';
-
-  let navContent = <NavContent navigation={collapseLayout ? navitemcollapse.items : navigation.items} />;
-  navClass = [...navClass, 'pc-sidebar'];
-  if (windowSize.width <= 1024 && collapseMenu) {
-    navClass = [...navClass, 'mob-sidebar-active'];
-  } else if (collapseMenu) {
-    navClass = [...navClass, 'navbar-collapsed'];
-  }
-
-  let navBarClass = ['navbar-wrapper'];
-
-  let mobileOverlay = <></>;
-  if (windowSize.width <= 1024 && collapseMenu) {
-    mobileOverlay = <div className="pc-menu-overlay" onClick={navToggleHandler} aria-hidden="true" />;
-  }
-
-  let navContentDOM = <div className={navBarClass.join(' ')}>{navContent}</div>;
 
   return (
-    <nav className={navClass.join(' ')}>
-      {navContentDOM}
-      {mobileOverlay}
-    </nav>
+    <div className="sidebar-container">
+      <div className="sidebar">
+        <img src={Logo} alt="Company Logo" className="sidebar-logo" />
+
+        <div className="sidebar-section">
+          <h4>Navigation</h4>         
+          <Link to="">Home</Link>
+          <Link to="/dashboard/sales">Dashboard / Sales</Link>
+        </div>
+
+        <div className="sidebar-section">
+          <h4>Elements</h4>
+          <p>Ui Components</p>
+          <Link to="/typography">Typography</Link>
+          <Link to="/color">Color</Link>
+          <Link to="">Icons</Link>
+        </div>
+
+        <div className="sidebar-section">
+          <h4>Pages</h4>
+          <p>15+ Readymade Pages</p>
+          <Link to="/register">Register</Link>
+          <Link to="/login">Login</Link>
+        </div>
+
+        <div className="sidebar-section">
+          <h4>Other</h4>
+           <p>Extra More Things</p>
+          <Link to="/sample-page">Sample Pages</Link>
+          <Link to="">Menu Levels</Link>
+          <Link to="">Disabled Menu</Link>
+        </div>
+      </div>
+    </div>
   );
 }
