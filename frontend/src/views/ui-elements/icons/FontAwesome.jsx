@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // react-bootstrap
 import { Row, Col, Card, OverlayTrigger, Tooltip } from 'react-bootstrap';

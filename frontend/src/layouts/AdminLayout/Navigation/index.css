@@ -1,6 +1,6 @@
 /* Main container */
 .sidebar-container {
-  width: 340px;
+  width: 300px;
   background-color: #1e1f26;
   padding: 0;
   border-radius: 4px;
@@ -14,9 +14,9 @@
 /* Scrollable inner sidebar */
 .sidebar {
   margin-top: 50PX;
-  height: 100%;
-  text-align: center;                /* full height */
-  overflow-y: scroll;            /* <-- makes sidebar scrollable */
+  height: 100%; 
+  margin-left: 40px;               /* full height */
+  overflow-y: auto;            /* <-- makes sidebar scrollable */
   display: flex;
   flex-direction: column;
   background-color: #1e1f26;
@@ -64,6 +64,6 @@
 
 /* Active style (optional) */
 .sidebar-section a.active {
-  color: #4a78ff;
+  color: #0a2880;
   font-weight: bold;
 }

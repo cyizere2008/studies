@@ -1,5 +1,18 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faHouse,
+  faGauge,
+  faFont,
+  faPalette,
+  faIcons,
+  faUserPlus,
+  faRightToBracket,
+  faFile,
+  faLayerGroup,
+  faBan
+} from '@fortawesome/free-solid-svg-icons';
 
 // project imports
 import NavContent from './NavContent';
@@ -25,31 +38,31 @@ export default function Navigation() {
 
         <div className="sidebar-section">
           <h4>Navigation</h4>         
-          <Link to="">Home</Link>
-          <Link to="/dashboard/sales">Dashboard / Sales</Link>
+          <Link to=""><FontAwesomeIcon icon={faHouse} />Home</Link>
+          <Link to="/dashboard/sales"> <FontAwesomeIcon icon={faGauge} /> Dashboard / Sales</Link>
         </div>
 
         <div className="sidebar-section">
           <h4>Elements</h4>
           <p>Ui Components</p>
-          <Link to="/typography">Typography</Link>
-          <Link to="/color">Color</Link>
-          <Link to="">Icons</Link>
+          <Link to="/typography"><FontAwesomeIcon icon={faFont} />Typography</Link>
+          <Link to="/color"><FontAwesomeIcon icon={faPalette} /> Color</Link>
+          <Link to=""><FontAwesomeIcon icon={faIcons} />Icons</Link>
         </div>
 
         <div className="sidebar-section">
           <h4>Pages</h4>
           <p>15+ Readymade Pages</p>
-          <Link to="/register">Register</Link>
-          <Link to="/login">Login</Link>
+          <Link to="/register"><FontAwesomeIcon icon={faUserPlus} />Register</Link>
+          <Link to="/login"><FontAwesomeIcon icon={faRightToBracket} />Login</Link>
         </div>
 
         <div className="sidebar-section">
           <h4>Other</h4>
            <p>Extra More Things</p>
-          <Link to="/sample-page">Sample Pages</Link>
-          <Link to="">Menu Levels</Link>
-          <Link to="">Disabled Menu</Link>
+          <Link to="/sample-page"><FontAwesomeIcon icon={faFile} />Sample Pages</Link>
+          <Link to=""><FontAwesomeIcon icon={faLayerGroup} />Menu Levels</Link>
+          <Link to=""><FontAwesomeIcon icon={faBan} />Disabled Menu</Link>
         </div>
       </div>
     </div>

@@ -110,7 +110,7 @@ html, body {
 ========================================================= */
 .pc-container,
 .main-content { /* merge both systems */
-    margin-left: 350px;
+    margin-left: 300px;
     margin-top:70px;
     padding-top: 10px;
     transition: margin-left 0.3s ease;
